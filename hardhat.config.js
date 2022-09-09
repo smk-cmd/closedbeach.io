@@ -23,6 +23,10 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
  */
 module.exports = {
   solidity: "0.8.4",
+  // Allows for React to access info about smart contract
+  paths:{
+    artifacts: './src/artifacts',
+  },
   networks: {
     ropsten: {
       url: process.env.ROPSTEN_URL || "",
