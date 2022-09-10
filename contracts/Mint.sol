@@ -12,6 +12,7 @@ contract BeachSumos is ERC721, ERC721URIStorage, Ownable {
     Counters.Counter private _tokenIdCounter;
 
     //Ensure there is no duplicates in the URI during IPS
+    //Mapping of strings to integers
     mapping(string => uint8) existingURIs;
 
     constructor() ERC721("BeachSumos", "BS") {}
@@ -20,6 +21,7 @@ contract BeachSumos is ERC721, ERC721URIStorage, Ownable {
         return "ipfs://";
     }
 
+    //This function only allows the owner of the smart contract to mint a token
     function safeMint(address to, string memory uri) public onlyOwner {
         uint256 tokenId = _tokenIdCounter.current();
         _tokenIdCounter.increment();
@@ -29,22 +31,29 @@ contract BeachSumos is ERC721, ERC721URIStorage, Ownable {
 
     function payToMint(address buyer, string memory metadataURI)
         public
-        payable
+        payable //Means someone can transfer money into the contract
         returns (unit256)
     {
+        //Check to ensure the Item had not been minted yet
         require(existingURIs[metadataURI] != 1, "This NFT is already minted");
+        //Check to make sure amount of Eth sent is sufficent  
         require(msg.value >= 0.05 ether, "Insufficent funds");
 
         uint256 newItemId = _tokenIdCounter.current();
         _tokenIdCounter.increment();
         existingURIs[metadataURI] = 1;
 
-        _mint(recipient, newItemId);
+        _mint(buyer, newItemId);
         _setTokenURI(newItemId, metadataURI);
 
         return newItemId;
     }
 
+    function count() public view returns (uint256){
+        retrun _tokenIdCounter.current;
+    }
+
+    //Checks to see if the NFT is owned 
     function isNftOwed(string memory uri) public view returns (bool) {
         return existingURIs[uri] == 1;
     }
