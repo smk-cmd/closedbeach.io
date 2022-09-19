@@ -2,7 +2,7 @@ const { expect } = require("chai");
 const { ethers } = require("hardhat");
 
 describe("Mint", function () {
-  it("Should return the new greeting once it's changed", async function () {
+  it("Should Mint BeachSumos NFT when the", async function () {
     const BeachSumos = await ethers.getContractFactory("BeachSumos");
     const Beachsumos = await BeachSumos.deploy();
     await Beachsumos.deployed();
@@ -17,6 +17,14 @@ describe("Mint", function () {
     const TokenMint =await Beachsumos.payToMint(buyer,metadataURI,{
       value: ethers.utils.parseEther('0.05')
     });
+
+    //waiting for transaction to be mined
+    await TokenMint.wait();
+
+    balance = await Beachsumos.balanceOf(buyer);
+    expect (balance).to.equal(1);
+
+    expect (await Beachsumos.isNftOwed(metadataURI)).to.equal(true);
 
   });
 });
