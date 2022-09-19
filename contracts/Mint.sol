@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.4;
 
-import "@openzeppelin/contracts@4.7.3/token/ERC721/ERC721.sol";
-import "@openzeppelin/contracts@4.7.3/token/ERC721/extensions/ERC721URIStorage.sol";
-import "@openzeppelin/contracts@4.7.3/access/Ownable.sol";
-import "@openzeppelin/contracts@4.7.3/utils/Counters.sol";
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/utils/Counters.sol";
 
 contract BeachSumos is ERC721, ERC721URIStorage, Ownable {
     using Counters for Counters.Counter;
@@ -29,14 +29,13 @@ contract BeachSumos is ERC721, ERC721URIStorage, Ownable {
         _setTokenURI(tokenId, uri);
     }
 
-    function payToMint(address buyer, string memory metadataURI)
-        public
-        payable //Means someone can transfer money into the contract
-        returns (unit256)
-    {
+    function payToMint(
+        address buyer,
+        string memory metadataURI //Means someone can transfer money into the contract
+    ) public payable returns (uint256) {
         //Check to ensure the Item had not been minted yet
         require(existingURIs[metadataURI] != 1, "This NFT is already minted");
-        //Check to make sure amount of Eth sent is sufficent  
+        //Check to make sure amount of Eth sent is sufficent
         require(msg.value >= 0.05 ether, "Insufficent funds");
 
         uint256 newItemId = _tokenIdCounter.current();
@@ -49,11 +48,11 @@ contract BeachSumos is ERC721, ERC721URIStorage, Ownable {
         return newItemId;
     }
 
-    function count() public view returns (uint256){
-        retrun _tokenIdCounter.current;
+    function count() public view returns (uint256) {
+        return _tokenIdCounter.current();
     }
 
-    //Checks to see if the NFT is owned 
+    //Checks to see if the NFT is owned
     function isNftOwed(string memory uri) public view returns (bool) {
         return existingURIs[uri] == 1;
     }
