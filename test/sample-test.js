@@ -2,7 +2,7 @@ const { expect } = require("chai");
 const { ethers } = require("hardhat");
 
 describe("Mint", function () {
-  it("Should Mint BeachSumos NFT when the", async function () {
+  it("Should Mint BeachSumos NFT when the Mint Contract is deployed", async function () {
     const BeachSumos = await ethers.getContractFactory("BeachSumos");
     const Beachsumos = await BeachSumos.deploy();
     await Beachsumos.deployed();
