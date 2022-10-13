@@ -1,7 +1,5 @@
-// Artwork #2
-{
+{    
     "name" : "Chill LL",
     "image" : "https://ipfs.io/ipfs/Qma3Y5FvmTX3tobd1HfCthySLKTdSeekBkALudVWf5AmUw",
-    "description": "Common"
-    "Attributes": "Sumo Wrestler", "Fluffy Mawashi", "Dragon Fly Hat", "Brown", "Blue Eyes" "No Shoes"
-    }
+    "description": "Common",
+    "Attributes": ["Sumo Wrestler", "Fluffy Mawashi", "Dragon Fly Hat", "Brown", "Blue Eyes", "No Shoes"]}
