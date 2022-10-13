@@ -26,7 +26,8 @@ const NAV__LINKS = [
 ]
 
 const Header = () => {
-  return <header className="header">
+  return (
+  <header className="header">
     <Container>
       <div className="navigation">
         <div className="logo">
@@ -42,28 +43,28 @@ const Header = () => {
           <ul className="nav__list">
             {NAV__LINKS.map((item, index) => (
               <li className="nav__item" key={index}>
-                <NavLink to={item.url}>{item.display}</NavLink>
+                <NavLink to={item.url} className= { navClass=> navClass.isActive ? 'active': ''}>{item.display}</NavLink>
               </li>
             ))}
           </ul>
         </div>
 
-          <div className="nav__right align-items-center gap-5 ">
-            <button className="btn"> 
-              {" "}
-              <Link to='/wallet' className=" d-flex gap-2 align-items-center"> 
-                {" "}
-                <span>
-                  <i class="ri-wallet-line"></i>
-                  </span>{" "}
-                </Link>{" "}
-                Connect Wallet </button>
-            <span className="mobile__menu"><i class="ri-menu-line"></i></span>
-          </div>
+          <div className="nav__right d-flex align-items-center gap-5 ">
+            <button className="btn d-flex gap-2 align-items-center"> 
+              <span>
+                <i class="ri-wallet-line"></i>
+              </span>
+                    <Link to='/wallet'> Connect Wallet </Link>
+            </button>
 
+            <span className="mobile__menu">
+              <i class="ri-menu-line"></i>
+            </span>
+          </div>
       </div>
     </Container>
   </header>
+  );
 };
 
 export default Header;
