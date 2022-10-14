@@ -101,10 +101,40 @@ contract NftMarketplace {
             revert NftMarketplace__NotApprovedForMarketplace();
         }
         s_listings[nftAddress][tokenID] = Listing(price, msg.sender);
+<<<<<<< HEAD
         emit ItemList(msg.sender, nftAddress, tokenID)
      }
 
     function buyItem(address nftAddress, uint256 tokenId) 
+=======
+        emit ItemList(msg.sender, nftAddress, tokenID);
+     }
+
+     /**
+      * @notice Method for cancelling listing
+      * @param nftAddress Address of NFT contract
+      * @param tokenID Token ID of NFT
+      */
+    function cancelListing(address nftAddress, uint 256 tokenID)
+        external
+        isOwner(nftAddress, tokenID, msg.sender)
+        isListed(nftAddress, tokenID)
+        {
+            delete (s_listings[nftAddress][tokenID]);
+            emit ItemCanceled(msg.sender, nftAddress, tokenID);
+        }
+
+        /**
+         * @notice Method for buying listing
+         * @notice The owner of an NFT could unapprove the marketplace,
+         * which would cause this funciton to fail
+         * Ideally you'd also have a 'createOffer' funciton.
+         * @param nftAddress Address of NFT contract
+         * @param TokenID Token ID of NFT
+         */
+
+    function buyItem(address nftAddress, uint256 tokenID) 
+>>>>>>> parent of 7b39e97 (compiled NFTMarketplace.sol)
         external 
         payable
         isListed(nftAddress, tokenId)
