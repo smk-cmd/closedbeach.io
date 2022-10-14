@@ -1,7 +1,6 @@
-// Artwork #1
 {
     "name" : "Chill Alex",
     "image" : "https://ipfs.io/ipfs/QmQuqxo2o9BoS62dQizWs4adz25NCdzuir25hsb3jcaUg8",
-    "description": "Common"
-    "Attributes": "Sumo Wrestler", "Radiant Mawashi", "Cat Hat", "Brown", "Vitilig", "Green Eyes", "No Shoes"
+    "description": "Common",
+    "Attributes": ["Sumo Wrestler", "Radiant Mawashi", "Cat Hat", "Brown", "Vitilig", "Green Eyes", "No Shoes"]
     }
