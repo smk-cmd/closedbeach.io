@@ -30,6 +30,7 @@ contract NftMarketplace {
     mapping(address => uint256) private s_proceeds;
 
     //Modifiers
+    // An NFT is currently not listed 
     modifier notListed(address nftAddress, uint256 tokenID, address owner) {
         Listing memory listing = s_listing[nftAddress][tokenID];
         if (listing.price > 0){
@@ -38,6 +39,10 @@ contract NftMarketplace {
         _;
     }
 
+
+    // You don't want to buy your own NFT. 
+    // Checks the validiity of the owner
+    // errors out if it sees that owner is trying to buy its own NFT. 
     modifier isOwner(address nftAddress, uint256 tokenId, address spender) {
         IERC721 nft = IERC721(address);
         address owner = nft.ownerOf(tokenId);
@@ -47,6 +52,9 @@ contract NftMarketplace {
         _;
     }
 
+    // NFT is listed according to a nftAddres and tokenId
+    // If the listing price is less than or equal to 0, will tell the marketplace to mark it as a not listed NFt.
+    // All NFT's must have a value of greater than zero. 
     modifier isListed(address nftAddress, uint256 tokenId){
         Listing memory listing = s_listings[nftAddress][tokenId];
         if (listing.price <= 0){
