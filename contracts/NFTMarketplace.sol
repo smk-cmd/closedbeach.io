@@ -63,7 +63,7 @@ contract NftMarketplace is ReentrancyGuard{
         uint256 tokenID,
         address spender
       ) {
-        IERC721 nft = IERC721(address);
+        IERC721 nft = IERC721(nftAddress);
         address owner = nft.ownerOf(tokenID);
         if (spender != owner) {
             revert NftMarketplace__NotOwner();
@@ -108,7 +108,7 @@ contract NftMarketplace is ReentrancyGuard{
             revert NftMarketplace__NotApprovedForMarketplace();
         }
         s_listings[nftAddress][tokenID] = Listing(price, msg.sender);
-        emit ItemList(msg.sender, nftAddress, tokenID);
+        emit ItemListed(msg.sender, nftAddress, tokenID, price);
      }
 
      /**
@@ -116,7 +116,7 @@ contract NftMarketplace is ReentrancyGuard{
       * @param nftAddress Address of NFT contract
       * @param tokenID Token ID of NFT
       */
-    function cancelListing(address nftAddress, uint 256 tokenID)
+    function cancelListing(address nftAddress, uint256 tokenID)
         external
         isOwner(nftAddress, tokenID, msg.sender)
         isListed(nftAddress, tokenID)
@@ -131,7 +131,7 @@ contract NftMarketplace is ReentrancyGuard{
          * which would cause this funciton to fail
          * Ideally you'd also have a 'createOffer' funciton.
          * @param nftAddress Address of NFT contract
-         * @param TokenID Token ID of NFT
+         * @param tokenID Token ID of NFT
          */
 
     function buyItem(address nftAddress, uint256 tokenID) 
@@ -155,9 +155,9 @@ contract NftMarketplace is ReentrancyGuard{
         // have them withdraw the money :yes:
         s_proceeds[listedItem.seller] = s_proceeds[listedItem.seller] + msg.value;
         delete (s_listings[nftAddress][tokenID]);
-        IERC721(nftAddress).transferFrom(listedItem.seller, msg.sender, tokenID);
-        emit ItemBought(msg.sender, nftAddress, tokenID, listedItem.price);
+        IERC721(nftAddress).safeTransferFrom(listedItem.seller, msg.sender, tokenID);
         // check to make sure the NFT was transferred
+        emit ItemBought(msg.sender, nftAddress, tokenID, listedItem.price);
     }
     /*
      * @notice Method for updating listing
