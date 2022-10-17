@@ -36,7 +36,7 @@ const LiveAuction = () => {
                                     justify-content-between">
                                         <div>
                                             <h6>Created By</h6>
-                                            <p>Tee</p>
+                                            <p>Name</p>
                                         </div>
 
                                         <div>

@@ -26,14 +26,17 @@
 }
 
 .creator__info h6 {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     color: #fff;
     opacity: 80%;
     margin-bottom: 0;
+    font-weight: 300;
 }
 
 .creator__info p {
-    font-style: 0.7em;
+    font-style: 0.9em;
     color: #fff;
     margin-bottom: 0;
 }
+
+/*1:19:50 video*/
