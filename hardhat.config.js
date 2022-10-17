@@ -27,11 +27,25 @@ module.exports = {
     artifacts: "./src/artifacts",
   },
   networks: {
-    ropsten: {
-      url: process.env.ROPSTEN_URL || "",
-      accounts:
-        process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
-    },
+    hardhat: {
+      // // If you want to do some forking, uncomment this
+      // forking: {
+      //   url: MAINNET_RPC_URL
+      // }
+      chainId: 31337,
+  },
+  localhost: {
+      chainId: 31337,
+  },
+  goerli: {
+      url: GOERLI_RPC_URL,
+      accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : [],
+      //   accounts: {
+      //     mnemonic: MNEMONIC,
+      //   },
+      saveDeployments: true,
+      chainId: 5,
+  },
   },
   gasReporter: {
     enabled: process.env.REPORT_GAS !== undefined,
