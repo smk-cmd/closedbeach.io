@@ -7,7 +7,6 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
 dist
 dist-ssr
 *.local
@@ -28,9 +27,6 @@ node_modules
 coverage
 coverage.json
 typechain
-package-lock.json
-package.json
-
 
 #Hardhat files
 cache
