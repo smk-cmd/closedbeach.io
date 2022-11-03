@@ -1,8 +1,20 @@
-# closedbeach.io
+# ClosedBeach
 
-## Collaborative project for CECS 451b Fall 2022
+ClosedBeach.io is an NFT marketplace service that creates exclusive networking experiences for the CSULB community and promotes altruism by showcasing NFT artwork.
 
-# Front-End Repo yet to be merged:
-# https://github.com/TylerM1105/test-Beach
+## Overview
 
+Top-level directory layout
+```
+  .
+  ├── frontend          # Frontend source code and files
+  ├── backend           # Backend source code and files
+  ├── .gitignore
+  └── README.md
+```
 
+## Requirements
+
+- Visual Studio Code
+- npm
+- yarn
