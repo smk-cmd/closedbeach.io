@@ -1,11 +1,8 @@
-
-
-
 import React from "react";
-import ".hero-section.css";
 import { Link } from 'react-router-dom';
 import { Container, Row, Col } from 'reactstrap';
-import heroImg from '../../assets/images/hero.jpg'
+import heroImg from '../../assets/images/hero.jpg';
+import ".hero-section.css";
 
 
 const HeroSection = () => {

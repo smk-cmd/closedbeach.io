@@ -1,0 +1,13 @@
+{
+  "name": "closedbeach.io",
+  "packageManager": "yarn@3.2.4",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "yarn frontend:start"
+  }
+}

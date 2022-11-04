@@ -1,7 +1,5 @@
-
-
 import React from 'react'
-import Routers from '../../routers/Routers'
+import Routers from '../../routes/Routers'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 

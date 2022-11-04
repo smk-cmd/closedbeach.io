@@ -60,8 +60,8 @@ const { developmentChains } = require("../../helper-hardhat-config");
             basicNft.address,
             TOKEN_ID
           );
-          assert(listing.price.toString() == PRICE.toString());
-          assert(listing.seller.toString() == deployer.address);
+          assert(listing.price.toString() === PRICE.toString());
+          assert(listing.seller.toString() === deployer.address);
         });
       });
       describe("cancelListing", function () {
@@ -88,7 +88,7 @@ const { developmentChains } = require("../../helper-hardhat-config");
             basicNft.address,
             TOKEN_ID
           );
-          assert(listing.price.toString() == "0");
+          assert(listing.price.toString() === "0");
         });
       });
       describe("buyItem", function () {
@@ -118,8 +118,8 @@ const { developmentChains } = require("../../helper-hardhat-config");
           const deployerProceeds = await nftMarketplace.getProceeds(
             deployer.address
           );
-          assert(newOwner.toString() == user.address);
-          assert(deployerProceeds.toString() == PRICE.toString());
+          assert(newOwner.toString() === user.address);
+          assert(deployerProceeds.toString() === PRICE.toString());
         });
       });
       describe("updateListing", function () {
@@ -147,7 +147,7 @@ const { developmentChains } = require("../../helper-hardhat-config");
             basicNft.address,
             TOKEN_ID
           );
-          assert(listing.price.toString() == updatedPrice.toString());
+          assert(listing.price.toString() === updatedPrice.toString());
         });
       });
       describe("withdrawProceeds", function () {
@@ -175,7 +175,7 @@ const { developmentChains } = require("../../helper-hardhat-config");
           const deployerBalanceAfter = await deployer.getBalance();
 
           assert(
-            deployerBalanceAfter.add(gasCost).toString() ==
+            deployerBalanceAfter.add(gasCost).toString() ===
               deployerProceedsBefore.add(deployerBalanceBefore).toString()
           );
         });

@@ -1,10 +1,7 @@
-
-
 import React from "react";
-import './header.css'
-import { Container } from "reactstrap";
-
 import { NavLink, Link } from "react-router-dom";
+import { Container }     from "reactstrap";
+import './header.css';
 
 const NAV__LINKS = [
   {

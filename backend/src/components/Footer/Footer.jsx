@@ -1,11 +1,7 @@
-
-
 import React from "react";
-
+import { Link } from 'react-router-dom';
 import { Container, Row, Col, ListGroup, ListGroupItem } from "reactstrap";
 import './footer.css';
-import { Link } from 'react-router-dom';
-
 
 const MY__ACCOUNT = [
   {
@@ -23,9 +19,8 @@ const MY__ACCOUNT = [
   {
     display: 'Edit Profile',
     url: '/edit-profile'
-  },
-]
-
+  }
+];
 
 const RESOURCES = [
   {
@@ -43,9 +38,8 @@ const RESOURCES = [
   {
     display: 'Activity',
     url: '#'
-  },
-]
-
+  }
+];
 
 const COMPANY = [
   {
@@ -63,9 +57,8 @@ const COMPANY = [
   {
     display: 'Contact Us',
     url: '/contact'
-  },
-]
-
+  }
+];
 
 const Footer = () => {
   return (
