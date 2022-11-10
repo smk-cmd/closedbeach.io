@@ -33,6 +33,7 @@ dist-ssr
 
 node_modules
 .env
+.next
 coverage
 coverage.json
 typechain
