@@ -22,10 +22,9 @@
     "@testing-library/dom": "^7.21.4"
   },
   "scripts": {
-    "frontend:start": "react-scripts start",
-    "frontend:build": "react-scripts build",
-    "frontend:test": "react-scripts test",
-    "frontend:eject": "react-scripts eject"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
   "eslintConfig": {
     "extends": [

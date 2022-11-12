@@ -1,29 +1,23 @@
-//import img01 from "../images/img-01.jpg";
-import img02 from "../images/img-02.jpg";
-import img03 from "../images/img-03.jpg";
-import img04 from "../images/img-04.jpg";
-import img05 from "../images/img-05.jpg";
-import img06 from "../images/img-06.jpg";
-import img07 from "../images/img-07.jpg";
-import img08 from "../images/img-08.jpg";
-import img09 from "../images/img-09.jpg";
-
-import ava01 from "../images/ava-01.png";
-import ava02 from "../images/ava-02.png";
-import ava03 from "../images/ava-03.png";
-import ava04 from "../images/ava-04.png";
-import ava05 from "../images/ava-05.png";
-import ava06 from "../images/ava-06.png";
-
-import cs1 from "../images/chillAlex.png"
-
-import cs2 from "../images/goldenShark.png"
-import cs3 from "../images/tigerShark.png"
-//import cs4 from "https://ipfs.io/ipfs/Qma3Y5FvmTX3tobd1HfCthySLKTdSeekBkALudVWf5AmUw"
-// 
+import img01 from "../../../public/img-01.jpg";
+import img02 from "../../../public/img-02.jpg";
+import img03 from "../../../public/img-03.jpg";
+import img04 from "../../../public/img-04.jpg";
+import img05 from "../../../public/img-05.jpg";
+import img06 from "../../../public/img-06.jpg";
+import img07 from "../../../public/img-07.jpg";
+import img08 from "../../../public/img-08.jpg";
+import img09 from "../../../public/img-09.jpg";
+import ava01 from "../../../public/ava-01.png";
+import ava02 from "../../../public/ava-02.png";
+import ava03 from "../../../public/ava-03.png";
+import ava04 from "../../../public/ava-04.png";
+import ava05 from "../../../public/ava-05.png";
+import ava06 from "../../../public/ava-06.png";
+import cs1 from "../../../public/chillAlex.png";
+import cs2 from "../../../public/goldenShark.png";
+import cs3 from "../../../public/tigerShark.png";
 
 export const NFT__DATA = [
- 
   {
     id: "cs1",
     title: "The Chillest of Alex's",
@@ -31,7 +25,7 @@ export const NFT__DATA = [
     imgUrl: cs1,
     creator: "A Potato",
     creatorImg: ava04,
-    currentBid: 4.20,
+    currentBid: 4.2,
   },
 
   {
@@ -41,7 +35,7 @@ export const NFT__DATA = [
     imgUrl: cs2,
     creator: "A Potato",
     creatorImg: ava05,
-    currentBid: 4.20,
+    currentBid: 4.2,
   },
 
   {
