@@ -1,9 +1,7 @@
 import Head from "next/head";
 import "../src/app.css";
 
-export default function
 
-export default function
 export default function App({
   Component,
   pageProps: { session, ...pageProps },
