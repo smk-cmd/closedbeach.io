@@ -2,7 +2,7 @@ import Moralis from 'moralis';
 
 const config = {
     domain: process.env.APP_DOMAIN,
-    statement: 'Please sign this message to confirm your identity.',
+    statement: 'Confirm Identity, Please sign the message for verification!',
     uri: process.env.NEXTAUTH_URL,
     timeout: 60,
 };
