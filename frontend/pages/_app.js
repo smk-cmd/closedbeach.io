@@ -1,7 +1,6 @@
 import Head from "next/head";
 import "../src/app.css";
 
-
 export default function App({
   Component,
   pageProps: { session, ...pageProps },
@@ -18,5 +17,5 @@ export default function App({
     >
       <Component {...pageProps} />
     </SessionProvider>
-  )
+  );
 }

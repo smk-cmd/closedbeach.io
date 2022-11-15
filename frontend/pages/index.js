@@ -1,4 +1,4 @@
-import { unstable_getServerSession } from "next-auth/next";
+/*import { unstable_getServerSession } from "next-auth/next";
 import { authOptions } from "./api/auth/[...nextauth]";
 
 export async function getServerSideProps({ req, res }) {
@@ -7,9 +7,8 @@ export async function getServerSideProps({ req, res }) {
       session: await unstable_getServerSession(req, res, authOptions),
     },
   };
-}
+}*/
 
-import "../src/app.css";
 import Layout from "../src/components/Layout/Layout.jsx";
 
 function App() {
