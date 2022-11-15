@@ -1,21 +1,14 @@
 import Head from "next/head";
-import "../src/app.css";
+import "../styles/global.css";
 
-export default function App({
-  Component,
-  pageProps: { session, ...pageProps },
-}) {
+export default function MyApp({ Component, pageProps }) {
   return (
-    <SessionProvider
-      session={session}
-      // In case you use a custom path and your app lives at "/cool-app" rather than at the root "/"
-      basePath="cool-app"
-      // Re-fetch session every 5 minutes
-      refetchInterval={5 * 60}
-      // Re-fetches session when window is focused
-      refetchOnWindowFocus={true}
-    >
+    <div>
+      <Head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
       <Component {...pageProps} />
-    </SessionProvider>
+    </div>
   );
 }

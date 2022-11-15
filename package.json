@@ -3,7 +3,8 @@
   "private": true,
   "workspaces": [
     "frontend",
-    "backend"
+    "backend",
+    "metamaskAuth"
   ],
   "version": "0.1.0",
   "scripts": {

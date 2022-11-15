@@ -9,7 +9,7 @@ export async function getServerSideProps({ req, res }) {
   };
 }*/
 
-import Layout from "../src/components/Layout/Layout.jsx";
+import Layout from "../components/Layout.jsx";
 
 function App() {
   return <Layout />;
