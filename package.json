@@ -1,13 +1,10 @@
 {
-  "name": "closedbeach",
+  "name": "closedbeach.io",
+  "packageManager": "yarn@3.2.4",
   "private": true,
   "workspaces": [
     "frontend",
     "backend",
-    "metamaskAuth"
-  ],
-  "version": "0.1.0",
-  "scripts": {
-    "dev": "frontend:dev"
-  }
+    "packages/*"
+  ]
 }
