@@ -2,8 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
 import "./hero-section.css";
-
-import heroImg from "../../assets/images/hero.jpg";
+import heroImg from "../../../public/hero.jpg";
 
 const HeroSection = () => {
   return (
@@ -17,8 +16,8 @@ const HeroSection = () => {
                 <span>sell extraordinary</span> NFTs
               </h2>
               <p>
-                Create some weird shit at the tip of your fingers, 
-                and share it with the world! 
+                Create some weird shit at the tip of your fingers, and share it
+                with the world!
               </p>
 
               <div className="hero__btns d-flex align-items-center gap-4">

@@ -6,8 +6,5 @@
     "frontend",
     "backend",
     "packages/*"
-  ],
-  "scripts": {
-    "dev": "yarn frontend:start"
-  }
+  ]
 }

@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Container, Row, Col, ListGroup, ListGroupItem } from "reactstrap";
-import "./footer.css";
+import styles from "../styles/footer.module.css";
 
 import { Link } from "react-router-dom";
 
@@ -73,7 +73,7 @@ const Footer = () => {
                 <span>
                   <i class="ri-drop-line"></i>
                 </span>
-                  ClosedBeach
+                ClosedBeach
               </h2>
               <p>
                 Just some random shit, no-one readllyyyyyyy reads this right?
@@ -85,7 +85,7 @@ const Footer = () => {
             <h5>My Account</h5>
             <ListGroup className="list__group">
               {MY__ACCOUNT.map((item, index) => (
-                <ListGroupItem key={index} className="list__item">
+                <ListGroupItem key={index} className={styles.list__item}>
                   <Link to={item.url}> {item.display} </Link>
                 </ListGroupItem>
               ))}
@@ -96,7 +96,7 @@ const Footer = () => {
             <h5>Resources</h5>
             <ListGroup className="list__group">
               {RESOURCES.map((item, index) => (
-                <ListGroupItem key={index} className="list__item">
+                <ListGroupItem key={index} className={styles.list__item}>
                   <Link to={item.url}> {item.display} </Link>
                 </ListGroupItem>
               ))}
@@ -107,7 +107,7 @@ const Footer = () => {
             <h5>Company</h5>
             <ListGroup className="list__group">
               {COMPANY.map((item, index) => (
-                <ListGroupItem key={index} className="list__item">
+                <ListGroupItem key={index} className={styles.list__item}>
                   <Link to={item.url}> {item.display} </Link>
                 </ListGroupItem>
               ))}
@@ -116,7 +116,11 @@ const Footer = () => {
 
           <Col lg="3" md="6" sm="6" className="mb-4">
             <h5>Newsletter</h5>
-            <input type="text" className="newsletter" placeholder="Email" />
+            <input
+              type="text"
+              className={styles.newsletter}
+              placeholder="Email"
+            />
             <div className="social__links d-flex gap-3 align-items-center ">
               <span>
                 <Link to="#">
@@ -147,10 +151,10 @@ const Footer = () => {
           </Col>
 
           <Col lg="12" className=" mt-4 text-center">
-            <p className="copyright">
+            <p className={styles.copyright}>
               {" "}
-              Copyrights 2022, Developed by closedBeach.io developers granting freedom into the tech world
-              All Rights Reserved.{" "}
+              Copyrights 2022, Developed by closedBeach.io developers granting
+              freedom into the tech world All Rights Reserved.{" "}
             </p>
           </Col>
         </Row>
