@@ -8,10 +8,11 @@ Top-level directory layout
 ```
   .
   ├── .yarn/
+  ├── Makefile
   ├── backend/              # Backend source code and files
   ├── frontend/             # Frontend source code and files
   ├── packages/
-  │   └── shared/           # Shared source code and files
+  │   └── web/              # frontend web UI code and files
   ├── package.json          # root package.json file for the project
   ├── .yarnrc.yml
   └── yarn.lock
@@ -25,11 +26,10 @@ Top-level directory layout
 
 ## Development
 
-Run the frontend app in development mode.
+Install all the dependencies.
 ```
-yarn dev
+make install
 ```
-Open [http://localhost:3000](http://localhost:3000) to view the app in your browser.
 
 ## Using yarn
 

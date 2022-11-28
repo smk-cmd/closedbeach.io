@@ -4,22 +4,22 @@
   "private": true,
   "version": "1.0.0",
   "dependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^14.4.3",
-    "bootstrap": "^5.2.2",
-    "ipfs-http-client": "^59.0.0",
-    "next": "^13.0.2",
-    "prettier": "^2.7.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "reactstrap": "^9.1.5",
-    "remixicon": "^2.5.0",
-    "web-vitals": "^3.0.4"
+    "@testing-library/jest-dom": "5.16.5",
+    "@testing-library/react": "13.4.0",
+    "@testing-library/user-event": "14.4.3",
+    "bootstrap": "5.2.2",
+    "ipfs-http-client": "59.0.0",
+    "next": "13.0.2",
+    "prettier": "2.7.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "reactstrap": "9.1.5",
+    "remixicon": "2.5.0",
+    "web-vitals": "3.0.4"
   },
   "peerDependencies": {
-    "@popperjs/core": "^2.11.6",
-    "@testing-library/dom": "^7.21.4"
+    "@popperjs/core": "2.11.6",
+    "@testing-library/dom": "7.21.4"
   },
   "scripts": {
     "dev": "next dev",
