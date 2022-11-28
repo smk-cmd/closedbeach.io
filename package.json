@@ -7,8 +7,5 @@
     "metamaskAuth",
     "frontendnext"
   ],
-  "version": "0.1.0",
-  "scripts": {
-    "dev": "frontend:dev"
-  }
+  "version": "0.1.0"
 }
