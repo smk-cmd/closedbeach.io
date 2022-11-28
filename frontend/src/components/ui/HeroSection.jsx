@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import "./hero-section.css";
 import heroImg from "../../../public/hero.jpg";
 
@@ -23,11 +23,11 @@ const HeroSection = () => {
               <div className="hero__btns d-flex align-items-center gap-4">
                 <button className=" explore__btn d-flex align-items-center gap-2">
                   <i class="ri-rocket-line"></i>{" "}
-                  <Link to="/market">Explore</Link>
+                  <Link href="/market">Explore</Link>
                 </button>
                 <button className=" create__btn d-flex align-items-center gap-2">
                   <i class="ri-ball-pen-line"></i>
-                  <Link to="/create">Create</Link>
+                  <Link href="/create">Create</Link>
                 </button>
               </div>
             </div>

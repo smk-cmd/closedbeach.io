@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 import "./step-section.css";
 
@@ -47,7 +47,7 @@ const StepSection = () => {
                 </span>
                 <div className="step__item__content">
                   <h5>
-                    <Link to="/wallet">{item.title}</Link>
+                    <Link href="/wallet">{item.title}</Link>
                   </h5>
                   <p className="mb-0">{item.desc}</p>
                 </div>

@@ -4,7 +4,8 @@
   "workspaces": [
     "frontend",
     "backend",
-    "metamaskAuth"
+    "metamaskAuth",
+    "frontendnext"
   ],
   "version": "0.1.0",
   "scripts": {

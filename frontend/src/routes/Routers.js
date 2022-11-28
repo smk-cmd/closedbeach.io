@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 
 import { Routes, Route, Navigate } from "react-router-dom";
 
@@ -25,3 +25,4 @@ const Routers = () => {
 };
 
 export default Routers;
+*/

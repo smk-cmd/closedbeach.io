@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 import "./nft-card.css";
 
@@ -18,7 +18,7 @@ const NftCard = (props) => {
 
       <div className="nft__content">
         <h5 className="nft__title">
-          <Link to={`/market/${id}`}>{title}</Link>
+          <Link href={`/market/${id}`}>{title}</Link>
         </h5>
 
         <div className="creator__info-wrapper d-flex gap-3">
@@ -50,7 +50,7 @@ const NftCard = (props) => {
           {showModal && <Modal setShowModal={setShowModal} />}
 
           <span className="history__link">
-            <Link to="#">View History</Link>
+            <Link href="#">View History</Link>
           </span>
         </div>
       </div>
