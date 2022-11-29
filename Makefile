@@ -22,7 +22,7 @@ install:
 	yarn install
 
 clean:
-	-rm -r $(NODE_MODULES_DIR)
+	-rm -r $(NODE_MODULES_DIRS)
 	yarn cache clean
 
 # create a new branch from the current branch
