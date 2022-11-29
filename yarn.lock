@@ -12138,6 +12138,7 @@ __metadata:
     eslint: 8.14.0
     eslint-config-next: 12.1.5
     moralis: ^2.8.0
+    moralis-v1: ^1.12.0
     next: 13.0.5
     postcss: ^8.4.12
     react: 18.2.0
@@ -16093,6 +16094,27 @@ __metadata:
   version: 1.0.2
   resolution: "module-error@npm:1.0.2"
   checksum: 5d653e35bd55b3e95f8aee2cdac108082ea892e71b8f651be92cde43e4ee86abee4fa8bd7fc3fe5e68b63926d42f63c54cd17b87a560c31f18739295575a3962
+  languageName: node
+  linkType: hard
+
+"moralis-v1@npm:^1.12.0":
+  version: 1.12.0
+  resolution: "moralis-v1@npm:1.12.0"
+  dependencies:
+    "@babel/runtime": 7.16.7
+    "@babel/runtime-corejs3": 7.16.8
+    "@metamask/detect-provider": ^1.2.0
+    axios: 0.26.1
+    crypto-js: 4.1.1
+    ethers: 5.6.0
+    react-native-crypto-js: 1.0.0
+    uuid: ^8.3.2
+    ws: ^8.3.0
+    xmlhttprequest: 1.8.0
+  dependenciesMeta:
+    crypto-js:
+      optional: true
+  checksum: 30f110b006fc051b545ad54b93dfcd19b130e89f3e58bde7703c0042356b2b6422640e5ab1e165cc6e314cebc52f98c313d5fcc594bc0196dfba568a149c8b6f
   languageName: node
   linkType: hard
 
