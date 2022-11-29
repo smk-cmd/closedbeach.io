@@ -1,5 +1,8 @@
 REPO_DIR=$(shell git rev-parse --show-toplevel)
-NODE_MODULES_DIR=node_modules
+PACKAGES_DIR=$(REPO_DIR)/packages
+WEB_DIR=$(PACKAGES_DIR)/web
+
+NODE_MODULES_DIRS=$(REPO_DIR)/node_modules $(WEB_DIR)/node_modules
 
 GIT_BRANCH=$(shell git rev-parse --abbrev-ref HEAD)
 
@@ -20,6 +23,7 @@ install:
 
 clean:
 	-rm -r $(NODE_MODULES_DIR)
+	yarn cache clean
 
 # create a new branch from the current branch
 # usage: make branch JIRA=XXXX OR make branch NAME=YYYY
@@ -43,4 +47,3 @@ git-push:
 git-rebase:
 	git fetch origin
 	git rebase origin/$(GIT_BRANCH)
-
