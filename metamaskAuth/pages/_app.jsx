@@ -1,11 +1,13 @@
+// merging WagmiConfig and Session Provider
+
 import {
-  createClient,
-  configureChains,
-  defaultChains,
+  createClient, // default option for Wagmi, default configurations 
+  configureChains, // chains that run based off mainnet and goerli 
+  defaultChains, 
   WagmiConfig,
 } from "wagmi";
-import { publicProvider } from "wagmi/providers/public";
-import { SessionProvider } from "next-auth/react";
+import { publicProvider } from "wagmi/providers/public"; // folder when downloading wagmi
+import { SessionProvider } from "next-auth/react"; // next auth is next js migration 
 
 const { provider, webSocketProvider } = configureChains(defaultChains, [
   publicProvider(),

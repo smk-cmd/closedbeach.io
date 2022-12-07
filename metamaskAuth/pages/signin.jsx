@@ -46,6 +46,7 @@ function SignIn() {
     push(url);
   };
 
+  // html page where we can validate the authentication process through metamask
   return (
     <div>
       <h3>Web3 Authentication</h3>
