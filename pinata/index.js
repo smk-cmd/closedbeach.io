@@ -3,16 +3,14 @@ const pinataSDK = require('@pinata/sdk');
 require('dotenv').config()
 // needs to get data from .env file
 const fs = require('fs');
-// 
 const pinata = pinataSDK(process.env.PINATA_API_KEY, process.env.PINATA_API_SECRET);
 // simply calls for .dotenv file to show what the pinata key and secret key is
 
-//
-const fs = require('fs');
-const readableStreamForFile = fs.createReadStream('./yourfile.png');
+const readableStreamForFile = fs.createReadStream('./artworks/1.jpeg');
+// will read from artworks folder and which specific picture we want
 const options = {
     pinataMetadata: {
-        name: MyCustomName,
+        name: "Closed Beach Collection",
         keyvalues: {
             customKey: 'customValue',
             customKey2: 'customValue2'
@@ -22,6 +20,7 @@ const options = {
         cidVersion: 0
     }
 };
+// test
 pinata.pinFileToIPFS(readableStreamForFile, options).then((result) => {
     //handle results here
     console.log(result);
@@ -29,11 +28,6 @@ pinata.pinFileToIPFS(readableStreamForFile, options).then((result) => {
     //handle error here
     console.log(err);
 });
-
-
-
-
-
 
 
 
