@@ -3,7 +3,7 @@ NODE_MODULES_DIR=node_modules
 
 GIT_BRANCH=$(shell git rev-parse --abbrev-ref HEAD)
 
-.PHONY: all install clean branch git-pull git-push git-rebase
+.PHONY: all install clean branch git-pull git-push git-rebase doctor dev
 
 all:
 	@echo "'make' can be called with:"
@@ -20,6 +20,7 @@ install:
 
 clean:
 	-rm -r $(NODE_MODULES_DIR)
+	yarn cache clean
 
 # create a new branch from the current branch
 # usage: make branch JIRA=XXXX OR make branch NAME=YYYY
@@ -44,3 +45,8 @@ git-rebase:
 	git fetch origin
 	git rebase origin/$(GIT_BRANCH)
 
+doctor:
+	yarn dlx @yarnpkg/doctor
+
+dev:
+	yarn workspace @closedbeach.io/web-ui dev
