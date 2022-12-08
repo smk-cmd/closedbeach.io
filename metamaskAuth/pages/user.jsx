@@ -4,6 +4,8 @@ import { getSession, signOut } from "next-auth/react";
 
 // gets a prop from getServerSideProps
 // user proceeds to sign in
+
+// user html process
 function User({ user }) {
   return (
     <div>
@@ -18,7 +20,8 @@ function User({ user }) {
 // user enters correct credentials and has a metamask account
 export async function getServerSideProps(context) {
   const session = await getSession(context);
-
+export async function getServerSideProps(context) { // renders the page 
+  const session = await getSession(context); // starts session 
   // redirect if not authenticated
   // return back to credentials page
   if (!session) {
@@ -29,6 +32,7 @@ export async function getServerSideProps(context) {
       },
     };
   }
+}
 
   return {
     props: { user: session.user },
