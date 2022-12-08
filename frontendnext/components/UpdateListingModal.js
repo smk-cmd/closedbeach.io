@@ -25,6 +25,7 @@ export default function UpdateListingModal({
         onClose && onClose()
         setPriceToUpdateListingWith("0")
     }
+
     const { runContractFunction: updateListing } = useWeb3Contract({
         abi: nftMarketplaceAbi,
         contractAddress: marketplaceAddress,
